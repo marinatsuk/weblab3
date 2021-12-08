@@ -1,0 +1,233 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-size: 20px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header, footer {
+	height: auto;
+	width: 100%;
+	background-color: rgb(176, 248, 248);
+	float: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#block1 {
+	margin-left: 50px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	min-width: 10%;
+	max-width: 30%;
+	min-height: 30%;
+	text-align: left;
+	width: 50%;
+	font-size: 20px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#blockX {
+	margin-right: 50px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+	text-align: center;
+	background-color: white;
+	min-width: 10%;
+	max-width: 30%;
+	min-height: 30%;
+	float: right;
+}
+
+
+h3 {
+	margin: 3%;
+}
+
+#blockY {
+	margin-top: 2%;
+	margin-right: 5%;
+	margin-bottom: 2%;
+	width: 20%;
+	min-height: 33%;
+	float: right;
+	background-color: white;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#block7 {
+	padding: 2%;
+	width: 60%;
+	float: left;
+	text-align: left;
+}
+
+
+.content {
+	float: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.content > div {
+	width: 33.33%;
+}
+
+
+#block2 {
+	background-color: rgb(170, 243, 192);
+	padding: 10px;
+	text-align: center;
+}
+#block3 {
+	text-align: center;
+}
+
+#block4 {
+	background-color: rgb(243, 170, 174);
+	padding: 10px;
+	text-align: center;
+}
+
+#block5 {
+	background-color: rgb(243, 170, 174);
+	padding: 10px;
+	text-align: center;
+}
+
+#block6 {
+	background-color: rgb(170, 243, 192);
+	padding: 10px;
+	text-align: center;
+}
+
+.iterator{
+	display: none;
+}
+
+#glitchText {
+	background: black;	
+	color: white;
+	font-weight: bold;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 300px;
+	z-index: 1;
+		
+}
+
+#inputter div {
+	text-align: left;
+}
+
+#glitchText div {
+	font-size: 40px;
+}
+
+#glitchText div:hover:before,#glitchText div:hover:after {
+	position: absolute;
+	content: "Glitch effect";
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+#glitchText div:hover:before {
+	top: 49.5%;
+	left: 49.5%;
+	color: rgba(233, 30, 99, 0.8);
+	animation: distort1 300ms linear infinite;
+}
+
+#glitchText div:hover:after {
+	top: 50.5%;
+	left: 50.5%;
+	color: rgba(3, 169, 244, 0.8);
+	animation: distort2 300ms linear infinite;
+}
+
+@keyframes distort1 {
+	0% {
+		top: 49.5%;
+		left: 49.5%;
+	}
+	12.5% {
+		top: 49.5%;
+		left: 50%;
+	}
+	25% {
+		top: 49.5%;
+		left: 50.5%;
+	}
+	37.5% {
+		top: 50%;
+		left: 50.5%;
+	}
+	50% {
+		top: 50.5%;
+		left: 50.5%;
+	}
+	62.5% {
+		top: 50.5%;
+		left: 50%;
+	}
+	75% {
+		top: 50.5%;
+		left: 49.5%;
+	}
+	87.5% {
+		top: 50%;
+		left: 49.5%;
+	}
+	100% {
+		top: 49.5%;
+		left: 49.5%;
+	}
+}
+
+@keyframes distort2 {
+	0% {
+		top: 50.5%;
+		left: 50.5%;
+	}
+	12.5% {
+		top: 50%;
+		left: 50.5%;
+	}
+	25% {
+		top: 49.5%;
+		left: 50.5%;
+	}
+	37.5% {
+		top: 49.5%;
+		left: 50%;
+	}
+	50% {
+		top: 49.5%;
+		left: 49.5%;
+	}
+	62.5% {
+		top: 50%;
+		left: 49.5%;
+	}
+	75% {
+		top: 50.5%;
+		left: 49.5%;
+	}
+	87.5% {
+		top: 50.5%;
+		left: 50%;
+	}
+	100% {
+		top: 50.5%;
+		left: 50.5%;
+	}
+}
