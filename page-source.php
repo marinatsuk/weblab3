@@ -12,9 +12,6 @@
 	$response['status'] = 'success';
 	$response = json_encode($response);
 	header('Access-Control-Allow-Origin: *');
-	header('Content-type: application/json; charset=utf-8');
-	if ($response) {
-		header('Content-Length: '.strlen ($response));
-	}
+	header('Content-type: application/json; charset=utf-8');	
 	echo $response;
 ?>	
