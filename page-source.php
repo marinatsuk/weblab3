@@ -8,8 +8,9 @@
 	} catch (Exception $e) {
 		$response = array('error' => $e->getMessage());
 	}
-
-	$response['status'] = 'success';
+	
+	$response['color'] = $_POST['color'];
+	$response['size'] = $_POST['size'];
 	$response = json_encode($response);
 	header('Access-Control-Allow-Origin: *');
 	header('Content-type: application/json; charset=utf-8');	
