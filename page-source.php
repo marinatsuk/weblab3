@@ -1,8 +1,18 @@
 <?php 
-	$handle = fopen('style.txt', 'w');
-	fwrite($fh, file_get_contents('php://input'));
-	fclose($fh);
+	try {
+		$file_handle = fopen('style.json', 'w');
+		fwrite($file_handle, json_encode($_POST));
+		fclose($file_handle);
 
-	header('Content-Type: application/json; charset=utf-8');
-	echo json_encode('New params are saved.');
-?>
+		$response['status'] = 'success';
+	} catch (Exception $e) {
+		$response = array('error' => $e->getMessage());
+	}
+
+	$response = json_encode($response);
+	header('Access-Control-Allow-Origin: *');
+	header('Content-type: application/json; charset=utf-8');
+	if ($response) {
+		header('Content-Length: '.mb_strlen($response, '8bit'));
+	}
+	echo $response;

@@ -1,14 +1,24 @@
-$("#inputter").submit(function(e){
-	alert("!");
-	e.preventDefault();
+$(function() {
+	$('#inputter').on('submit', function(event){
+		event.preventDefault();
 
-	$.post("page-source.php", $(this).serialize(), function(result) {
-		alert(result);
-	})
-	.done(function() {
-		alert( "second success" );
-	})
-	.fail(function() {
-		alert("error");
+		$.ajax({
+			type: 'POST',
+			url: "page-source.php",
+			data: $(this).serialize(),
+			cache: false,
+			// contentType: false,
+			dataType: 'json',
+			// processData: false
+		})
+		.done(function(data){
+			alert(data.status);
+		})
+		.fail(function(jqXHR, textStatus, errorThrown) {
+			alert(textStatus);
+		}).
+		always(function(){
+
+		});
 	});
 });
