@@ -16,3 +16,4 @@
 		header('Content-Length: '.mb_strlen($response, '8bit'));
 	}
 	echo $response;
+?>	
