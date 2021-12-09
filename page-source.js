@@ -13,7 +13,7 @@ $(function() {
 			alert(data.status);
 
 			$("#glitchText div:first").css("color", data.color);
-            $("#glitchText div:first").css("font-size", +data.size);			
+			$("#glitchText div:first").css("font-size", +data.size);			
 		})
 		.fail(function(jqXHR, textStatus, errorThrown) {
 			alert(textStatus);
